@@ -1,0 +1,569 @@
+/* استعادة التنسيقات الافتراضية */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #121212;
+  color: #f5f5f5;
+}
+
+/* تنسيق الهيدر */
+.header {
+  background-color: #1e1e1e;
+  padding: 15px 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* تصميم الحاوية */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* الشعار */
+.logo img {
+  height: 90px;
+}
+
+/* جعل العناصر داخل الهيدر متباعدة */
+.header-content {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+}
+
+/* القائمة الرئيسية */
+.main-menu {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center; /* توسيط القائمة */
+}
+
+.main-menu ul {
+  list-style: none;
+  display: flex;
+  gap: 30px; /* إضافة مسافات بين العناصر */
+}
+
+.main-menu ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.main-menu ul li a:hover {
+  color: #f39c12;
+}
+
+/* زر تسجيل الدخول */
+.btn {
+  background-color: #f39c12;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+  margin-left: auto; /* دفع الزر إلى أقصى اليمين */
+}
+
+.btn:hover {
+  background-color: #e67e22;
+}
+
+/* زر القائمة للجوال */
+.menu-toggle {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  display: none;
+}
+/*nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn */
+
+/* خلفية Hero Section */
+.hero-section {
+  background: url("imag/WhatsApp\ Image\ 2025-02-08\ at\ 16.16.42_4e42dff9.jpg")
+    no-repeat center center/cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  position: relative;
+  background-attachment: fixed;
+}
+
+/* طبقة تغطية لتعتيم الخلفية */
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+/* تنسيق النصوص */
+.hero-text {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+  margin: auto;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.hero-text h2 {
+  font-size: 36px;
+  margin-bottom: 15px;
+}
+
+.hero-text p {
+  font-size: 18px;
+  margin-bottom: 25px;
+}
+
+/* نموذج التسجيل */
+.intro-newsletter {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 2;
+}
+
+/* تنسيق حقول الإدخال */
+.intro-newsletter input {
+  padding: 12px;
+  width: 250px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  outline: none;
+}
+
+/* زر الاشتراك */
+.site-btn {
+  background: #f39c12;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* تأثير عند تمرير الماوس */
+.site-btn:hover {
+  background: #e67e22;
+}
+
+/*  nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn */
+/* تنسيق عام */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Arial", sans-serif;
+}
+
+/* تنسيق القسم */
+/* تنسيق الشبكة لجعل العنوان في الأعلى والعناصر تحته */
+/* جعل العنوان في الأعلى وتكبيره */
+.section-title {
+  position: absolute; /* تثبيت العنوان في الأعلى */
+  top: 20px; /* رفعه لأعلى الصفحة */
+  left: 50%;
+  transform: translateX(-50%); /* توسيطه أفقيًا */
+  text-align: center;
+  width: 100%;
+  z-index: 10;
+}
+
+.section-title h2 {
+  font-size: 50px; /* تكبير العنوان */
+  font-weight: bold;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+.section-title p {
+  font-size: 22px; /* تكبير الوصف */
+  color: #555;
+  font-weight: 500;
+}
+
+/* تعديل القسم لجعل العناصر تحت العنوان */
+.categories-section {
+  position: relative;
+  padding: 150px 0 50px; /* زيادة المسافة العلوية لإفساح مجال للعنوان */
+  background-color: #f8f9fa;
+  text-align: center;
+}
+
+/* شبكة الفئات */
+.categories-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px; /* زيادة المسافة بين العناصر */
+  padding: 0 20px;
+}
+
+/* تكبير حجم كل عنصر */
+.category-item {
+  flex: 1;
+  max-width: 400px; /* زيادة الحجم */
+  min-width: 350px;
+  background: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+
+.category-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* تكبير الصورة */
+.category-thumb {
+  height: 250px; /* زيادة الارتفاع */
+  background-size: cover;
+  background-position: center;
+}
+
+/* تكبير النص */
+.category-text {
+  padding: 30px;
+}
+
+.category-text h5 {
+  font-size: 26px; /* تكبير عنوان الفئة */
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.category-text p {
+  font-size: 20px; /* تكبير الوصف */
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.category-item:hover {
+  background: #a0a7a4;
+}
+/* nnnnnnnnnnnnnnnnnnnnnnnnnnnn */
+/* الحاوية التي تحتوي على العنوان */
+/* تنسيق العنوان في الأعلى */
+.section-title {
+  position: absolute; /* تثبيت العنوان في الأعلى */
+  top: 20px; /* رفعه لأعلى الصفحة */
+  left: 50%;
+  transform: translateX(-50%); /* توسيطه أفقيًا */
+  text-align: center;
+  width: 100%;
+  z-index: 10;
+}
+
+.section-title h2 {
+  font-size: 50px; /* تكبير العنوان */
+  font-weight: bold;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+.section-title p {
+  font-size: 22px; /* تكبير الوصف */
+  color: #555;
+  font-weight: 500;
+}
+
+/* قسم الكورسات */
+.course-section {
+  position: relative;
+  padding: 150px 0 50px; /* زيادة المسافة العلوية لإفساح مجال للعنوان */
+  background-color: #f8f9fa;
+  text-align: center;
+}
+
+/* شبكة الكورسات */
+.courses-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px; /* زيادة المسافة بين العناصر */
+  padding: 0 20px;
+}
+
+/* تكبير حجم كل عنصر */
+.course-item {
+  flex: 1;
+  max-width: 400px; /* زيادة الحجم */
+  min-width: 350px;
+  background: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+
+.course-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* تكبير الصورة */
+.course-thumb {
+  height: 250px; /* زيادة الارتفاع */
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.course-thumb .price {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: #ff7f50;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* تكبير النص */
+.course-info {
+  padding: 30px;
+}
+
+.course-info h5 {
+  font-size: 26px; /* تكبير عنوان الدورة */
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.course-info p {
+  font-size: 20px; /* تكبير الوصف */
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.course-info .students {
+  font-size: 16px;
+  color: #95a5a6;
+  margin-bottom: 15px;
+}
+
+/* مظهر المؤلف */
+.course-author {
+  display: flex;
+  align-items: center;
+}
+
+.course-author .ca-pic {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+  background-size: cover;
+}
+
+.course-author p {
+  font-size: 14px;
+  color: #7f8c8d;
+}
+
+.course-author span {
+  color: #ff7f50;
+  font-weight: bold;
+}
+
+.course-item:hover {
+  background: #a0a7a4;
+}
+#Structure,
+#Database {
+  background-size: contain; /* لجعل الصورة تظهر بالكامل */
+  background-position: center; /* لضمان أن الصورة تكون في المنتصف */
+  background-repeat: no-repeat;
+}
+
+/* nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn */
+.search-section {
+  padding: 100px 0;
+  background-color: #343a40; /* خلفية داكنة */
+}
+
+.search-wrap {
+  text-align: center;
+}
+
+.section-title_3 h2 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.section-title_3 p {
+  font-size: 18px;
+  font-weight: 400;
+  color: #ddd;
+}
+
+.course-search-form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.course-search-form .form-group_1 {
+  margin-bottom: 20px;
+}
+
+.course-search-form .form-control {
+  height: 50px;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 25px;
+  border: 1px solid #ddd;
+  transition: border-color 0.3s ease-in-out;
+}
+
+.course-search-form .form-control:focus {
+  border-color: #007bff; /* تغيير اللون عند التفاعل */
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.5); /* تأثير الظل عند التفاعل */
+}
+
+.site-btn {
+  background-color: #007bff; /* زر أزرق */
+  color: white;
+  padding: 15px 30px;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.site-btn:hover {
+  background-color: #0056b3; /* تغيير اللون عند مرور الماوس */
+}
+
+/* nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn */
+.banner-section {
+  padding: 100px 0;
+  background: #f8f9fa; /* خلفية فاتحة */
+  text-align: center;
+}
+
+.container_5 {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.section-title_5 h2 {
+  font-size: 40px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.section-title_5 p {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.text-5 .site-btn_5 {
+  background-color: #007bff; /* زر أزرق */
+  color: #fff;
+  padding: 12px 25px;
+  font-size: 18px;
+  text-decoration: none;
+  border-radius: 30px;
+  transition: background-color 0.3s ease;
+}
+
+.text-5 .site-btn_5:hover {
+  background-color: #0056b3; /* تغيير اللون عند التفاعل */
+}
+
+/* nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn */
+/* تصميم الفيديو */
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+/* ضبط النصوص فوق الفيديو */
+.hero-section_2 {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  background: rgba(0, 0, 0, 0.5); /* لون شفاف لتحسين قراءة النص */
+}
+
+.hero-content {
+  z-index: 1;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+/* زر مميز */
+.btn {
+  background: #ff4500;
+  color: white;
+  padding: 10px 20px;
+  font-size: 1rem;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #e63e00;
+}
